@@ -60,6 +60,20 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 } */       
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px; /* или 100% если хочешь без ограничения */
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 10px;
