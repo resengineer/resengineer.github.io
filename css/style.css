@@ -1,12 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('../images/IMG_8030.JPG'); 
-    background-size: cover;
-    background-position: center;
+    background-image: url('../images/IMG_8030.JPG');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: auto; /* или contain */
     margin: 0;
-    padding: 0;
-}
+    padding: 0;}
 h1 {
     color: #333;
 }
