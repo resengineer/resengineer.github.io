@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,7 +52,15 @@ p {
 .container {
   max-width: 600px;
   width: 100%;
-  background: white;
+  /* background: white; */
+  /* background-color: rgba(255, 255, 255, 0.85); */
+  background-color: #f5f7fa;
+  /* background-color: #faf4f0; */
+  /* background-color: #fdf6e3; */
+  /* background-color: #f3e6d3; */
+  color: #3a2e27;
+
+
   padding: 20px;
   margin: auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
