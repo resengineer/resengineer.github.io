@@ -29,17 +29,26 @@ p {
 }
 
 .background {
-  position: fixed;
-  top: 0; left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-image: url('../images/IMG_8030.JPG');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  z-index: -1;
 }
-
 .container {
   max-width: 600px;
   width: 100%;
