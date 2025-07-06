@@ -116,7 +116,7 @@ p {
 
 .video-container {
   position: relative;
-  width: 100%;
+  width: 85%;
   max-width: 960px; /* или 100% если хочешь без ограничения */
   margin: 0 auto;
 }
