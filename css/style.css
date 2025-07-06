@@ -49,6 +49,21 @@ p {
   background-position: center top;
   background-repeat: no-repeat;
 }
+
+.corner-caption {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  color: white;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 3px #000;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
 .container {
   max-width: 600px;
   width: 100%;
