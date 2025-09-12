@@ -38,7 +38,7 @@ p {
   z-index: -2;
 }
 
-.background-image {
+.background-image-jabel-shams {
   position: absolute;
   top: 0;
   left: 0;
@@ -49,6 +49,19 @@ p {
   background-position: center top;
   background-repeat: no-repeat;
 }
+
+.background-image-kili {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/kili_sunrise.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
 
 .corner-caption {
   position: absolute;
