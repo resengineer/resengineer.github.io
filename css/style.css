@@ -81,9 +81,9 @@ p {
   max-width: 600px;
   width: 100%;
   /* background: white; */
-  /* background-color: rgba(255, 255, 255, 0.85); */
-  background-color: #f5f7fa;
-  /* background-color: #faf4f0; */
+  background-color: rgba(255, 255, 255, 0.85);
+  /* background-color: #f5f7fa; */
+  /* background-color: #faf4f0; */ 
   /* background-color: #fdf6e3; */
   /* background-color: #f3e6d3; */
   color: #3a2e27;
