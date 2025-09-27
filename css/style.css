@@ -223,7 +223,8 @@ p {
   font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
-  font-size: clamp(16px, 2.2vw, 20px);
+  /* font-size: clamp(16px, 2.2vw, 20px); */
+  font-size: clamp(30px, 3vw, 32px);
   text-decoration: none;
   color: inherit;
   white-space: nowrap;

@@ -32,7 +32,7 @@
     </div>
 
     <div class="container">
-        <h1>RESENGINEER</h1>
+        <!-- <h1>RESENGINEER</h1> -->
         <p>Hi, I'm Dmitry. Feel free to connect with me through the links below.</p>
         <div class="social-links">
             <a href="mailto:dmitry.ivanov@resengineer.org">Email</a>
@@ -139,5 +139,20 @@
 
         <p>🚧 Building Something Great! 🚧</p>
     </div>
+
+    <script>
+    (function(){
+    const onScroll = () => {
+        if (window.scrollY > 2) {
+        document.documentElement.classList.add('body-scrolled');
+        } else {
+        document.documentElement.classList.remove('body-scrolled');
+        }
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+    </script>
+
 </body>
 </html>
