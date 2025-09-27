@@ -164,3 +164,79 @@ p {
         width: 90%;
     }
 }
+
+
+:root{
+  --nc-height: 56px;           /* высота шапки (Nextcloud ~44px) */
+  --nc-bg: rgba(255,255,255,.75);
+  --nc-fg: #111;
+  --nc-border: rgba(0,0,0,.08);
+  --nc-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+
+/* Тёмная тема (если в системе включена) */
+@media (prefers-color-scheme: dark){
+  :root{
+    --nc-bg: rgba(24,24,27,.7);
+    --nc-fg: #f5f5f5;
+    --nc-border: rgba(255,255,255,.12);
+    --nc-shadow: 0 2px 10px rgba(0,0,0,.35);
+  }
+}
+
+*{box-sizing:border-box}
+
+.nc-header{
+  position: fixed;          /* всегда сверху */
+  top: 0; left: 0; right: 0;
+  height: var(--nc-height);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;   /* лево — центр — право */
+  align-items: center;
+  gap: .5rem;
+
+  padding: 0 .75rem;
+  background: var(--nc-bg);
+  color: var(--nc-fg);
+  border-bottom: 1px solid var(--nc-border);
+  backdrop-filter: saturate(150%) blur(10px);   /* «стекло», как у Nextcloud */
+  -webkit-backdrop-filter: saturate(150%) blur(10px);
+  z-index: 1000;
+  transition: box-shadow .2s ease;
+}
+
+/* лёгкая тень после прокрутки — как «прилипшая» панель */
+.body-scrolled .nc-header{
+  box-shadow: var(--nc-shadow);
+}
+
+.nc-left, .nc-right{ display:flex; align-items:center; gap:.5rem; }
+.nc-left{ justify-content:flex-start; }
+.nc-right{ justify-content:flex-end; }
+
+.nc-center{
+  display:flex; justify-content:center; align-items:center;
+  min-width: 0;
+}
+
+.nc-title{
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: clamp(16px, 2.2vw, 20px);
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+/* отступ для основного контента, чтобы его не перекрывало меню */
+.page{
+  padding-top: calc(var(--nc-height) + 14px);
+}
+
+/* Небольшая адаптация на узких экранах */
+@media (max-width: 480px){
+  :root{ --nc-height: 52px; }
+  .nc-title{ letter-spacing: .04em; }
+  .nc-header{ padding: 0 .5rem; }
+}
