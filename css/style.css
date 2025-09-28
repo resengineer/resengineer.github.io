@@ -16,7 +16,8 @@ html, body {
 }
 
 .navbar-header{
-  position: fixed; 
+  /* position: fixed; */
+  position: sticky;
   top: 0; left: 0; right: 0;
   height: var(--navbar-height);
   display: grid;
@@ -25,7 +26,8 @@ html, body {
   justify-content: center;
   /* color: #3a2e27;*/
   z-index: 1000;
-  background: rgba(255,255,255,.75);
+  background: rgba(60, 116, 161, 0.75);
+  /* background: rgba(255,255,255,.75); */
   backdrop-filter: saturate(150%) blur(8px);
   /* border-bottom: 1px solid rgba(0,0,0,.08);*/
 }
@@ -38,7 +40,7 @@ html, body {
   min-width: 0;
 }
 
-.navbar-center h1{ margin:0; line-height:1; }
+.navbar-center h1{ margin:0; line-height:1; color: #d6d6d6;}
 
 h1, h2, h3 {
   color: #333;
