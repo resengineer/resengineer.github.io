@@ -11,26 +11,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- Header -->
-<header class="nc-header" role="banner">
-  <div class="nc-left">
-    <!-- сюда потом поставим иконки/логотип -->
-  </div>
-
-  <div class="nc-center">
-    <!-- <a href="/" class="nc-title" aria-label="Home">RESENGINEER</a> -->
-    <h1>RESENGINEER</h1>
-  </div>
-
-  <nav class="nc-right" aria-label="Primary">
-    <!-- тут появятся ссылки/кнопки -->
-  </nav>
-</header>
-
 <body>
+    <!-- Navigation Panel -->
+    <header class="navbar-header">
+        <div class="navbar-center"><h1>RESENGINEER</h1></div>
+    </header>
+
     <div class="background">
         <div class="background-image-jabel-shams"></div>
-    </div>
+    </div> 
 
     <div class="container">
         <!-- <h1>RESENGINEER</h1> -->
@@ -141,7 +130,7 @@
         <p>🚧 Building Something Great! 🚧</p>
     </div>
 
-    <script>
+<!--    <script>
     (function(){
     const onScroll = () => {
         if (window.scrollY > 2) {
@@ -153,7 +142,15 @@
     onScroll();
     window.addEventListener('scroll', onScroll, {passive:true});
     })();
-    </script>
+    </script> -->
 
+<!--    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".nc-header");
+    if(header){
+        document.body.style.paddingTop = header.offsetHeight + "px";
+    }
+    });
+    </script>-->
 </body>
 </html>
