@@ -6,7 +6,8 @@
 html, body {
   font-family: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
   text-align: center;
-  margin: 0; padding: 0; 
+  margin: 0; 
+  padding: 0; 
   min-height: 100vh;
   height: 100%;
   overflow-x: hidden;
@@ -186,6 +187,24 @@ p {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.home-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;   /* убирает точки */
+  margin: 0;          /* убирает лишние отступы */
+  padding: 0;
+  display: flex;      /* удобно для горизонтального меню */
+  align-items: center;
+}
+
+nav li {
+  margin-right: 30px; /* чтобы иконка не липла к краю */
 }
 
 @media (max-width: 600px) {
