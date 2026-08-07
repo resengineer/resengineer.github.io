@@ -1,4 +1,4 @@
-name: Build website
+name: Build and deploy website
 
 on:
   push:
@@ -17,3 +17,22 @@ jobs:
 
       - name: Build website
         run: npm run build
+
+      - name: Deploy release
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          RELEASE="${GITHUB_SHA}"
+          BASE="/srv/deploy/resengineer.org"
+          TARGET="${BASE}/releases/${RELEASE}"
+
+          rm -rf "${TARGET}"
+          mkdir -p "${TARGET}"
+
+          cp -a _site/. "${TARGET}/"
+
+          ln -sfn "releases/${RELEASE}" "${BASE}/current"
+
+          cd "${BASE}/releases"
+          ls -1dt */ | tail -n +4 | xargs -r rm -rf
