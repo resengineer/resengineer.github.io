@@ -1,0 +1,19 @@
+name: Build website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: linux-x64
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build
