@@ -10,11 +10,4 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-collections:
-  - name: "test"
-    label: "Test"
-    folder: "content/test"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+collections: []
