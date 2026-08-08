@@ -7,7 +7,71 @@ backend:
   auth_endpoint: https://git.lab.resengineer.org/login/oauth/authorize
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images"
+public_folder: "/images"
 
-collections: []
+collections:
+  - name: "highlights"
+    label: "Highlights"
+    label_singular: "Highlight"
+    folder: "content/highlights"
+    create: true
+    slug: "{{year}}-{{slug}}"
+
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Year"
+        name: "year"
+        widget: "number"
+        value_type: "int"
+
+      - label: "Order"
+        name: "order"
+        widget: "number"
+        value_type: "int"
+        default: 100
+
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Image"
+            name: "src"
+            widget: "image"
+
+          - label: "Alt text"
+            name: "alt"
+            widget: "string"
+            required: false
+
+      - label: "Description"
+        name: "body"
+        widget: "markdown"
+        required: false
+
+      - label: "Links"
+        name: "links"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Text"
+            name: "label"
+            widget: "string"
+
+          - label: "URL"
+            name: "url"
+            widget: "string"
+
+      - label: "Tags"
+        name: "tags"
+        widget: "hidden"
+        default: "highlights"
+
+      - label: "Generate separate page"
+        name: "permalink"
+        widget: "hidden"
+        default: false

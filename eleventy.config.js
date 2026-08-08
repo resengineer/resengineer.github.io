@@ -1,5 +1,4 @@
 module.exports = function (eleventyConfig) {
-  // Общие статические файлы
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("videos");
@@ -7,12 +6,22 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("admin");
 
-  // Локальные материалы отдельных страниц
   eleventyConfig.addPassthroughCopy("pages/**/images");
   eleventyConfig.addPassthroughCopy("pages/**/videos");
 
-  // Старый фрагмент пока не участвует в сайте
   eleventyConfig.ignores.add("includes/**");
+
+  eleventyConfig.addCollection("highlights", function (collectionApi) {
+    return collectionApi
+      .getFilteredByTag("highlights")
+      .sort((a, b) => {
+        if (a.data.year !== b.data.year) {
+          return b.data.year - a.data.year;
+        }
+
+        return (a.data.order || 100) - (b.data.order || 100);
+      });
+  });
 
   return {
     dir: {
