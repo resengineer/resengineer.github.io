@@ -33,6 +33,12 @@ collections:
         widget: "number"
         value_type: "int"
         default: 100
+        hint: "Smaller number appears earlier within the same year"
+
+      - label: "Show on Home Page"
+        name: "featured"
+        widget: "boolean"
+        default: true
 
       - label: "Images"
         name: "images"
@@ -48,12 +54,30 @@ collections:
             widget: "string"
             required: false
 
-      - label: "Description"
+          - label: "Caption"
+            name: "caption"
+            widget: "string"
+            required: false
+
+      - label: "Short Description"
         name: "body"
         widget: "markdown"
         required: false
+        hint: "Short text shown in the highlight or archive"
 
-      - label: "Links"
+      - label: "Read More URL"
+        name: "page_url"
+        widget: "string"
+        required: false
+        hint: "Optional. Example: /pages/heriot-watt-university/"
+
+      - label: "Read More Label"
+        name: "page_label"
+        widget: "string"
+        required: false
+        default: "Read more →"
+
+      - label: "External Links"
         name: "links"
         widget: "list"
         required: false
@@ -71,7 +95,7 @@ collections:
         widget: "hidden"
         default: "highlights"
 
-      - label: "Generate separate page"
+      - label: "Generate Separate Page"
         name: "permalink"
         widget: "hidden"
         default: false
