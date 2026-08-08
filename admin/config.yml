@@ -1,0 +1,20 @@
+backend:
+  name: gitea
+  repo: dmitry/resengineer.org
+  app_id: 50e9c4c3-2f0b-48b8-a131-bcbc3c4d4407
+  api_root: https://git.lab.resengineer.org/api/v1
+  base_url: https://git.lab.resengineer.org
+  auth_endpoint: https://git.lab.resengineer.org/login/oauth/authorize
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "test"
+    label: "Test"
+    folder: "content/test"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
